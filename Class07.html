@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & EVENT</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!--1.-->
+    <div id="myDiv">Original Text</div>
+
+    <!--2.-->
+    <p id="myParagraph">This is a Paragraph.</p>
+
+    <!--3.-->
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+ 
+    <!--4.-->
+    <ul id="myList1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>New Item</li>
+    </ul>
+
+    <!--5.-->
+    <span id="text">Initial Text</span>
+    <button onclick="changeText()">Click Me</button>
+
+    <!--6.-->
+    <input type="text" oninput="showInput()" id="myInput">
+    <div id="display"></div>
+
+    <!--7.-->
+    <select id="mySelect" onchange="updateText()">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+    </select>
+    <p id="output">Selected : None</p>
+
+    <!--8.-->
+    <img id="myImage" src="3.jpg" alt="Image" style="width: 500px; height: 500px;">
+    <button onclick="changeImage()">Change Image</button>
+
+    <!--9.-->
+    <div id="myDiv1">This will be hidden</div>
+    <button onclick="hideDiv()">Hide</button>
+
+    <!--10.-->
+    <div id="myDiv2" style="display: none;">I am now Visible</div>
+    <button onclick="showDiv()">Show</button>
+
+    <!--11.-->
+    <p id="myParagraph1">This is a paragaph</p>
+    <button onclick="addHighlight()">Highlight</button>
+
+    <!--12.-->
+    <p id="myParagraph2" class="highlight">This is a paragraph.</p>
+    <button onclick="removeHighlight()">Remove Highlight</button>
+
+    <!--13.-->
+    <div id="hoverDiv" style="width: 100px; height: 100px; background-color: gray;" onmouseover="changeColor()"
+        onmouseout="resetColor()"></div>
+
+    <!--14.-->
+    <label><input type="radio" name="color" value="Red" onchange="displayColor()">Red</label>
+    <label><input type="radio" name="color" value="Green" onchange="displayColor()">Green</label>
+    <p id="colorDisplay1">Selected Color: None</p>
+
+    <!--15.-->
+    <form onsubmit="handleSubmit(event)">
+    <input type="text" placeholder="Enter  your name" required>
+    <button type="submit">Submit</button>
+    
+    <script src="Class07.js"></script>
+</body>
+
+</html>
